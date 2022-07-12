@@ -19,6 +19,7 @@
     "loader/"
   ],
   "scripts": {
+    "lint": "eslint src/**/*{.ts,.tsx}",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -30,9 +31,14 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-plugin-i18next": "^6.0.0-4",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "typescript": "^4.7.4"
   },
   "license": "MIT"
 }
