@@ -27,6 +27,15 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    // No linting warnings on this ternary
+    const foo = this.first === "John" ? "bar" : "baz";
+    // Linting warnings on this ternary
+    const foo2 = this.first === "John" ? "bar" : undefined;
+    return (
+      <div>
+        <div>Hello, World! I'm {this.getText()}</div>
+        <div>{foo} {foo2}</div>
+      </div>
+    );
   }
 }
